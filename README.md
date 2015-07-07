@@ -61,15 +61,6 @@ launch a web browser and navigate to `localhost:8080`
 
 If a chat message is sent with any of the words matching (case-insensitive) a connected user's nickname, that user's chat window will see this message highlighted, with their nickname also highlighted within the message.
 
-Emit a `'mentioned'` event on the mentioned user's socket while passing an object as event argument,
-
-```
-{
-  ignoredBy : [nickname],
-  reason : String
-}
-```
-
 ### Kicking
 
 The admin (operator who has access to the running server terminal) can kick a user by nickname. `/kick [nickname] [optional reason]`
