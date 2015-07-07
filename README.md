@@ -134,7 +134,6 @@ The admin can unban a user by nickname or ip address.
 Removing a user from the ban list by nickname also removes the associated ip address from the ban list.
 
 1. Broadcast a `"[nickname] has been removed from ban list"` notification to the Chat log.
-1. Emit an `unban` event on the connected socket.
 1. Print a confirmation notice to the server's standard output with the nickname (if used) and the ip address of the user who has been forcefully disconnected.
 
 ### Private Messaging
