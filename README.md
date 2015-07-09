@@ -165,7 +165,7 @@ Broadcast a `"[offending nickname] has been blocked by [nickname] : [reason]"` n
 
 ---
 
-A connected user can unblock a blocked nickname with `/block [offending nickname] [optional reason]`
+A connected user can unblock a blocked nickname with `/unblock [offending nickname] [optional reason]`
 
 The offending nickname will be removed from the user's block list.
 
