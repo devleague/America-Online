@@ -76,6 +76,8 @@ If the user is currently connected to the server, when the kick command is execu
 Pass this object as an argument to the `'kick'` event.
 ```
 {
+  nickname: String
+  reason: String
 }
 ```
 
