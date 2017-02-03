@@ -1,14 +1,15 @@
 # America-Online
 
-## Socket server and web chat client using socket.io
+## Socket server and web chat client using Node streams.
 
 ### Goal
 
-Create a socket server using the [socket.io](http://socket.io) library to broadcast messages to connected clients.
+Create a socket server using Node sockets and streams to broadcast messages to
+connected clients.
 
-Use the socket.io library.
+Use Node's `net` module.
 
-Create a `public/` directory to store static assets that will be served up via http and used as the client to connect to your socket server. Use the [socket.io](http://socket.io) library to establish socket connections to the server, and jQuery for dom manipulation.
+Create a `public/` directory to store static assets that will be served up via http and used as the client to connect to your socket server. Use the [Net](https://nodejs.org/dist/latest-v6.x/docs/api/net.html) module to establish socket connections to the server, and vanilla Javascript for dom manipulation.
 
 The browser client application is split up into 2 states:
 
@@ -43,11 +44,11 @@ When a user disconnects, remove their nickname from the "List of connected users
 ---
 
 ### Running the browser client app server
-run `http-server` using `./public` as the webroot  
+run `http-server` using `./public` as the webroot
 binds to default port 8080
 
 ### Running the socket server
-run the socket server with `node server.js`  
+run the socket server with `node server.js`
 binds to any available port that you specify
 
 ### Loading the browser client app
@@ -75,7 +76,8 @@ If the user is currently connected to the server, when the kick command is execu
 Pass this object as an argument to the `'kick'` event.
 ```
 {
-  reason : String
+  nickname: String
+  reason: String
 }
 ```
 
